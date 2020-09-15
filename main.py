@@ -58,13 +58,14 @@ def search_book():
 
 
 def change_read():
-
     book_id = ui.get_book_id()
     book = store.get_book_by_id(book_id)
     if book:
         new_read = ui.get_read_value()
         book.read = new_read
         book.save()
+        read_string = 'not ' if not book.read else ''
+        print(f"\nYou have {read_string}read {book.title} by {book.author}\n")
     else:
         print(f'\nNo book with id: {book_id} found. Please try again.\n')
     
