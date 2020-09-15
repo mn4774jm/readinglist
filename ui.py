@@ -7,7 +7,7 @@ def display_menu_get_choice(menu):
      :returns: the user's choice """
     while True:
         print(menu)
-        choice = input('Enter choice? ')
+        choice = input('Enter choice? ').upper()
         if menu.is_valid(choice):
             return choice
         else:
@@ -28,7 +28,6 @@ def show_books(books):
     if books:
         for book in books:
             print(book)
-        print()
     else:
         print('No books to display')
     print()
