@@ -17,9 +17,9 @@ class Book:
 
         self.bookstore = BookStore()
 
-    '''Checks for existing ID value. 
+    """Checks for existing ID value. 
     If self.id has a value assigned the object self.id will is boolean True and is passed to DB through _update_book() to be updated. 
-    If self.id is empty it is boolean False and entry is passed to _add_book where it will be saved to DB and assigned a unique ID value. '''
+    If self.id is empty it is boolean False and entry is passed to _add_book where it will be saved to DB and assigned a unique ID value. """
 
     def save(self):
         if self.id:
