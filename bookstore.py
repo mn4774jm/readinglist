@@ -107,7 +107,7 @@ class BookStore:
                     new_id = res.lastrowid  # Get the ID of the new row in the table 
                     book.id = new_id  # Set this book's ID
             except sqlite3.IntegrityError as e:
-                raise BookError(f'Error - this book is already in the database. {book}') from e
+                raise BookError(f'Error - this book is already in the database. {book.title} by {book.author}') from e
             finally:
                 con.close()
 
